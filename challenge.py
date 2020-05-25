@@ -423,7 +423,10 @@ def movie_data_etl(wiki_movie_meta_data, kaggle_movie_metadata, kaggle_movie_rat
     try:
 
         print("Importing movie metadata into the movie_data database movies table- start")
- 
+        
+        # Clear all data from the movies_data database movies table
+        engine.connect().execute("TRUNCATE TABLE movies")
+
         # Store merged movie metadata to the database
         #
         # NOTE: Module section "8.5.1 Connect Pandas and SQL" subsection "Import the Movie Data" 
@@ -436,7 +439,7 @@ def movie_data_etl(wiki_movie_meta_data, kaggle_movie_metadata, kaggle_movie_rat
         # stores movies_df to the database instead of movies_with_ratings_df
         #
         # I followed the code in 8.5.1 as is and stored movies_df to the database
-        movies_df.to_sql(name='movies', con=engine, if_exists="replace")
+        movies_df.to_sql(name='movies', con=engine, if_exists="append")
 
         print("Importing movie metadata into the movie_data database movies table - complete - " + str(len(movies_df)) + " rows imported")
 
@@ -456,7 +459,7 @@ def movie_data_etl(wiki_movie_meta_data, kaggle_movie_metadata, kaggle_movie_rat
         
         print("Importing movie ratings data into the movie_data database ratings table - start")
 
-        # Clear all data from the ratings table
+        # Clear all data from the movies_data database ratings table
         engine.connect().execute("TRUNCATE TABLE ratings")
 
         rows_imported = 0
