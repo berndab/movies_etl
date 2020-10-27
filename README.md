@@ -1,20 +1,7 @@
-# Movies ETL
+# Python ETL
 
 ## Description
 The ETL application extracts movie data from Wikipedia and Kaggle data files, cleans and transforms the data, and load it into the movies_data PostgreSQL database
-
-## Analysis
-Programming skills alone are not enough for an ELT programmer to successfully develop a ETL program. The programmer must be able to apply a general ETL data source investigation methodology and utilize programmatic data investigation techniques, The methodology and techniques enable the developer to determine the data elements needed to fulfill the ETL requirements and to determine the quality of data provided by the selected data elements. 
-
-This project applied the following interactive ETL data source investigation methodology to determine the data elements needed to meet the ETL requirements, to determine the quality of the data elements, and to define transformation process needed to clean and format these data elements to meet the ETL requirements.
-
-Methodology
-* Determine if a data element in a data source fulfills an ETL requirement
-* Inspect the data element to discover data quality problems
-* Determine if the data quality problem can be corrected
-* Determine an algorithm to correct the problem
-* Determine the effort required to implement the corrective algorithm and if it is work implementing
-* Developing the final code to implement the corrective algorithm
 
 ## Source Data Investigation and Analysis
 
