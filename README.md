@@ -1,7 +1,7 @@
 # Python ETL
 
 ## Description
-The ETL application extracts movie data from Wikipedia JSON file and Kaggle CSV file, cleans and transforms the data, and load it into the movies_data PostgreSQL database
+A python etl application is created that extracts movie data from a Wikipedia JSON file and a Kaggle CSV file, cleans and transforms the data, and loads the data into a PostgreSQL database
 
 ## Source Data Investigation and Analysis
 
